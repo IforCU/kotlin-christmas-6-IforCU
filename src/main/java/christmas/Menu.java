@@ -1,5 +1,7 @@
 package christmas;
 
+import java.util.Arrays;
+
 public enum Menu {
     MushroomSoup("양송이스프", 6000, "Appetizer"),
     Tapas("타파스", 5500, "Appetizer"),
@@ -25,8 +27,11 @@ public enum Menu {
         this.kind = kind;
     }
 
-    public String menuname() {
-        return menuname;
+    public static Menu hasMenu(String str){
+        return Arrays.stream(Menu.values())
+                .filter(menuname -> menuname.equals(str))
+                .findAny()
+                .orElseThrow(() -> new IllegalArgumentException("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요."));
     }
 
     public Integer price() {
