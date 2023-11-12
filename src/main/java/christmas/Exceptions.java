@@ -1,5 +1,7 @@
 package christmas;
 
+import java.util.HashMap;
+
 public class Exceptions {
     public static void isInteger(String strValue) {
         try {
@@ -16,9 +18,30 @@ public class Exceptions {
         }
     }
 
-    public void isValidMenu(String[] menu){
-        for(String str : menu){
-            Menu.hasMenu(str);
+    public static void isValidMenu(String str){
+        Menu.hasMenu(str);
+    }
+
+    public static void isValidLeastOne(Integer num){
+        if(num <= 0){
+            throw new IllegalArgumentException("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
+        }
+    }
+
+    public static void isValidMenuFormat(String[] str){
+        try {
+            if(!(str.length == 2)){
+                throw new IllegalArgumentException("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
+            }
+            Integer.parseInt(str[1]);
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
+        }
+    }
+
+    public static void isvalidOverlapping(HashMap<String,Integer> order,String str) {
+        if(order.containsKey(str)){
+            throw new IllegalArgumentException("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
         }
     }
 }

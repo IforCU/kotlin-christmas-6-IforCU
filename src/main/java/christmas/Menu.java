@@ -28,10 +28,14 @@ public enum Menu {
     }
 
     public static Menu hasMenu(String str){
-        return Arrays.stream(Menu.values())
-                .filter(menuname -> menuname.equals(str))
+        return Arrays.stream(values())
+                .filter(value -> value.menuname.equals(str))
                 .findAny()
                 .orElseThrow(() -> new IllegalArgumentException("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요."));
+    }
+
+    public String menuname(){
+        return menuname;
     }
 
     public Integer price() {

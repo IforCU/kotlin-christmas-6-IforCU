@@ -1,5 +1,7 @@
 package christmas;
 
+import java.util.HashMap;
+
 public class ChristmasPreOrder {
     InputView inputView = new InputView();
     OutputView outputView = new OutputView();
