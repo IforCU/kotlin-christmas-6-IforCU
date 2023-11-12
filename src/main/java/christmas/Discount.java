@@ -5,8 +5,7 @@ public class Discount {
     private int day;
     private int money;
 
-    public Discount(int day,int money){
-        this.money = money;
+    public Discount(int day){
         this.day = day;
     }
 
