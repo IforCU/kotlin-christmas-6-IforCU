@@ -25,8 +25,32 @@ public class OutputView {
         System.out.println(commaMoney(money) + "원");
     }
 
-    public void giftMenu() {
-        System.out.println("<증정 메뉴>\n" + "샴페인 1개");
+    public void giftMenu(boolean bool) {
+        System.out.println("<증정 메뉴>");
+        if (bool) {
+            System.out.println("샴페인 1개");
+        } else {
+            System.out.println("없음");
+        }
+    }
+
+    public void benefits(HashMap<String,Integer> discount) {
+        System.out.println("<혜택 내역>");
+        discount.forEach((strKey, strValue) -> {
+            System.out.println(strKey +": -"+ commaMoney(strValue)+ "원");
+        });
+    }
+
+    public void totalDiscount(int money) {
+        System.out.println("<총혜택 금액>\n" + commaMoney(money) + "원");
+    }
+
+    public void estimatePayment(int money,int discountMoney){
+        System.out.println("<할인 후 예상 결제 금액>\n" + commaMoney(money - discountMoney) + "원");
+    }
+
+    public void eventBadge(String str){
+        System.out.println("<12월 이벤트 배지>\n" + str);
     }
 
     // 숫자 3자리 마다 콤마 찍기.

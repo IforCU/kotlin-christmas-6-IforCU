@@ -28,5 +28,8 @@ public class ChristmasPreOrder {
         OutputView.orderMenu(order.getOrder());
         order.setMoney();
         outputView.orderDiscountBefore(order.getMoney());
+        discount.setGift(order.getMoney());
+        discount.setDiscount();
+        outputView.benefits(discount.getDiscount());
     }
 }

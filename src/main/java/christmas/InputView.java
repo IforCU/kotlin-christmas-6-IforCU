@@ -28,6 +28,8 @@ public class InputView {
             Exceptions.isvalidOverlapping(order,str[0]); // 메뉴가 중복되지 않았나
             order.put(str[0], Integer.valueOf(str[1]));
         }
+        Exceptions.isOrderJustDrinks(order); // 음료만 있지 않았나.
+        Exceptions.isOrderUpTo20(order); // 메뉴의 갯수가 20개가 넘지 않았나.
         return order;
     }
 }
