@@ -5,6 +5,8 @@ public class Application {
         // TODO: 프로그램 구현
 //        ChristmasPreOrder christmasPreOrder = new ChristmasPreOrder();
 //        christmasPreOrder.run();
-        System.out.println(InputView.order());
+        Order order = new Order(InputView.order());
+        order.setMoney();
+        System.out.println(order.getMoney());
     }
 }
