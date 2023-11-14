@@ -34,10 +34,10 @@ public class OutputView {
         }
     }
 
-    public void benefits(HashMap<String,Integer> discount) {
+    public void benefits(HashMap<String, Integer> discount) {
         System.out.println("<혜택 내역>");
         discount.forEach((strKey, strValue) -> {
-            System.out.println(strKey +": -"+ commaMoney(strValue)+ "원");
+            System.out.println(strKey + ": -" + commaMoney(strValue) + "원");
         });
     }
 
@@ -45,11 +45,11 @@ public class OutputView {
         System.out.println("<총혜택 금액>\n" + commaMoney(money) + "원");
     }
 
-    public void estimatePayment(int money,int discountMoney){
+    public void estimatePayment(int money, int discountMoney) {
         System.out.println("<할인 후 예상 결제 금액>\n" + commaMoney(money - discountMoney) + "원");
     }
 
-    public void eventBadge(String str){
+    public void eventBadge(String str) {
         System.out.println("<12월 이벤트 배지>\n" + str);
     }
 

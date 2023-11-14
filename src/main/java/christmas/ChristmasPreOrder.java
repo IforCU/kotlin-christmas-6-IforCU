@@ -6,21 +6,21 @@ public class ChristmasPreOrder {
     Discount discount;
     Order order;
 
-    public void run(){
+    public void run() {
         outputView.printEventPlanner();
-        while(true){
-            try{
+        while (true) {
+            try {
                 discount = new Discount(InputView.visitDate());
                 break;
-            } catch (IllegalArgumentException e){
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
-        while(true){
-            try{
+        while (true) {
+            try {
                 order = new Order(InputView.order());
                 break;
-            } catch (IllegalArgumentException e){
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -29,7 +29,7 @@ public class ChristmasPreOrder {
         order.setMoney();
         outputView.orderDiscountBefore(order.getMoney());
         discount.setGift(order.getMoney());
-        discount.setDiscount();
-        outputView.benefits(discount.getDiscount());
+        discount.setDiscount(order.getOrder());
+//        outputView.benefits(discount.getDiscount());
     }
 }

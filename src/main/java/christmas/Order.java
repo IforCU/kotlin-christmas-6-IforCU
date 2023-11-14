@@ -12,10 +12,30 @@ public class Order {
 
     public void setMoney() {
         order.forEach((strKey, strValue) -> {
-            for(int i = 0 ; i < strValue ; i++){
+            for (int i = 0; i < strValue; i++) {
                 money += Menu.hasMenu(strKey).price();
             }
         });
+    }
+
+    public int getMainMenu() {
+        final int[] num = {0};
+        order.forEach((strKey, strValue) -> {
+            if (Menu.hasMenu(strKey).menuname().equals("Main")) {
+                num[0]++;
+            }
+        });
+        return num[0];
+    }
+
+    public int getDessertMenu() {
+        final int[] num = {0};
+        order.forEach((strKey, strValue) -> {
+            if (Menu.hasMenu(strKey).menuname().equals("Dessert")) {
+                num[0]++;
+            }
+        });
+        return num[0];
     }
 
     public HashMap<String, Integer> getOrder() {
