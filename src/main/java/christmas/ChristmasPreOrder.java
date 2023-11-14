@@ -29,7 +29,11 @@ public class ChristmasPreOrder {
         order.setMoney();
         outputView.orderDiscountBefore(order.getMoney());
         discount.setGift(order.getMoney());
-        discount.setDiscount(order.getOrder());
-//        outputView.benefits(discount.getDiscount());
+        discount.setDiscount(order.getMainMenu(), order.getDessertMenu());
+        outputView.giftMenu(discount.getGift());
+        outputView.benefits(discount.getDiscount());
+        outputView.totalDiscount(discount.getTotalDiscount());
+        outputView.estimatePayment(order.getMoney(), discount.estimateDiscount());
+        outputView.eventBadge(discount.getBadge(discount.getTotalDiscount()));
     }
 }

@@ -21,8 +21,10 @@ public class Order {
     public int getMainMenu() {
         final int[] num = {0};
         order.forEach((strKey, strValue) -> {
-            if (Menu.hasMenu(strKey).menuname().equals("Main")) {
-                num[0]++;
+            for (int i = 0; i < strValue; i++) {
+                if ("Main".equals(Menu.hasMenu(strKey).kind())) {
+                    num[0]++;
+                }
             }
         });
         return num[0];
@@ -31,8 +33,10 @@ public class Order {
     public int getDessertMenu() {
         final int[] num = {0};
         order.forEach((strKey, strValue) -> {
-            if (Menu.hasMenu(strKey).menuname().equals("Dessert")) {
-                num[0]++;
+            for (int i = 0; i < strValue; i++) {
+                if ("Dessert".equals(Menu.hasMenu(strKey).kind())) {
+                    num[0]++;
+                }
             }
         });
         return num[0];
