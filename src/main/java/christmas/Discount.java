@@ -41,7 +41,7 @@ public class Discount {
             discount.put(DistcountEvent.SPECIAL.getBenefit(),DistcountEvent.SPECIAL.getDiscount());
         }
         if(isdDayDiscount()){
-            discount.put(DistcountEvent.DDAY.getBenefit(),(DistcountEvent.SPECIAL.DDAY.getDiscount() + (day-1) * 100));
+            discount.put(DistcountEvent.CHRISTMAS.getBenefit(),(DistcountEvent.CHRISTMAS.getDiscount() + (day-1) * 100));
         }
         if (getGift()) {
             discount.put("증정 이벤트", 25000);

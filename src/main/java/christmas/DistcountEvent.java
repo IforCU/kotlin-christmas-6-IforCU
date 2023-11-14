@@ -1,8 +1,5 @@
 package christmas;
 
-import java.util.Arrays;
-import java.util.Optional;
-
 public enum DistcountEvent {
     //목 0 금 1 토 2 일 3 월 4 화 5 수 6
     // 1 2 주말 할인
@@ -12,7 +9,7 @@ public enum DistcountEvent {
     WEEKDAY(2023, "평일 할인"),
     WEEKEND(2023, "주말 할인"),
     SPECIAL(1000, "특별 할인"),
-    DDAY(1000, "크리스마스 디데이 할인");
+    CHRISTMAS(1000, "크리스마스 디데이 할인");
 
 
     private final int discount;

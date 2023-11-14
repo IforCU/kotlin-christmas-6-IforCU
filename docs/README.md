@@ -10,7 +10,7 @@ Class Discount
 
 ### 1) 크리스마스 디데이 할인. 12.1~12.25
 
-Class ChristmasDiscount
+ChristmasDiscount
 
 #### 1일날 1000으로 스타트 크리스마스에 따라 할인 금액 100원 씩 증가.
 
@@ -20,25 +20,25 @@ Class ChristmasDiscount
 
 #### 2) 평일 할인 일 ~ 목
 
-Class WeekdayDiscount
+WeekdayDiscount
 
 디저트 메뉴를 메뉴 1개당 2,023원 할인
 
 #### 3) 주말 할인 금,토
 
-Class WeekendDiscount
+WeekendDiscount
 
 메인 메뉴를 메뉴 1개당 2,023원 할인
 
 #### 4) 특별할인 3,10,17,24,31
 
-Class SpecialDiscount
+SpecialDiscount
 
 달력에 별이 있으면 총주문 금액에서 1,000원 할인
 
 #### 5) 증정 이벤트
 
-Class GiftEvent
+GiftEvent
 
 할인 전 총주문 금액이 12만 원 이상일 때, 샴페인 1개 증정
 
@@ -69,9 +69,15 @@ Class Exceptions
 메뉴가 20개 초과 시 [ERROR] 20개를 넘어서 주문 x
 
 
-# 클래스나 eunm이 될 만한 요소들.
+# 클래스나 eunm 요소
+
+## Class Application
 
 ## Class ChristmasPreOrder
+
+## Order
+
+## Discount
 
 ## Class InputView
 
@@ -93,13 +99,18 @@ Class Exceptions
 <음료> : 
 제로콜라(3,000), 레드와인(60,000), 샴페인(25,000)
 
-## Enum Week
-
-MON,TUE, WED, THU, FRI, SAT, SUN
-
 ## Enum Badge
 
 별, 트리, 산타
 
+## Enum DiscountEvent
+
+WEEKDAY(2023, "평일 할인"), 
+
+WEEKEND(2023, "주말 할인"), 
+
+SPECIAL(1000, "특별 할인"), 
+
+DDAY(1000, "크리스마스 디데이 할인")
 
 
