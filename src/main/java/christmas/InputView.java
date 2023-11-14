@@ -25,7 +25,7 @@ public class InputView {
             Exceptions.isValidMenuFormat(str); // 형식이 맞는가
             Exceptions.isValidMenu(str[0]); // 메뉴에 존재하는가
             Exceptions.isValidLeastOne(Integer.valueOf(str[1])); // 갯수가 0이 아닌가
-            Exceptions.isvalidOverlapping(order, str[0]); // 메뉴가 중복되지 않았나
+            Exceptions.isValidOverlapping(order, str[0]); // 메뉴가 중복되지 않았나
             order.put(str[0], Integer.valueOf(str[1]));
         }
         Exceptions.isOrderJustDrinks(order); // 음료만 있지 않았나.

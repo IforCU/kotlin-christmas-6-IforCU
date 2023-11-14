@@ -73,17 +73,199 @@ Class Exceptions
 
 ## Class Application
 
+메인 프로그램
+
 ## Class ChristmasPreOrder
 
+각각 클래스를 가져와 실행하는 당담.
+
+---
 ## Order
+
+### HashMap<String, Integer> order
+
+주문을 저장함.
+
+### int money
+
+주문 금액을 저장함.
+
+### void setMoney()
+
+주문 금액이 얼마 인지 주문 금액으로 저장함.
+
+### int getMainMenu()
+
+주문 중에 메인이 몇 개인지 리턴함.
+
+### int getDessertMenu()
+
+주문 중에 디저트가 몇 개인지 리턴함.
+
+### HashMap<String, Integer> getOrder()
+
+주문을 리턴함.
+
+### getMoney()
+
+주문 금액을 리턴함.
+
+---
 
 ## Discount
 
+할인을 저장하는 객체
+
+
+### int day
+
+날짜를 저장함.
+
+### HashMap<String, Integer> discount
+
+할인 정보를 저장함.
+
+### boolean gift
+
+증정 메뉴 여부를 저장함.
+
+### int getDay(), boolean getGift() 
+
+각각 날짜, 증정메뉴 여부를 리턴함
+
+### HashMap<String, Integer> getDiscount()
+
+할인 정보를 리턴함.
+
+### void setDiscount(int main , int dessert)
+
+할인 내역을 처리하여 저장함.
+
+### void setGift(int money)
+
+증정 여부를 확인해 저장함.
+
+### int getTotalDiscount()
+
+총 할인 금액을 리턴함
+
+### int estimateDiscount()
+
+증정 여부에 따라 예상 할인 금액을 리턴함.
+
+### String getBadge(int money)
+
+배찌 이벤트 여부를 리턴함.
+
+### private boolean isWeekendDiscount()
+
+주말 할인 여부를 리턴함.
+
+### private boolean isWeekdayDiscount()
+
+평일 할인 여부를 리턴함
+
+### private boolean isSpecialDiscount()
+
+특별 할인 여부를 리턴함
+
+### private boolean isCHRISTMASDiscount()
+
+크리스마스 디데이 할인 여부를 리턴함.
+
 ## Class InputView
+
+입력을 받는 객체
+
+### int visitDate()
+
+읽은 값을 예외처리 후 int 형식으로 리턴함.
+
+### HashMap<String, Integer> order()
+
+읽은 값을 예외처리 후 HashMap 형식으로 리턴함.
+
 
 ## Class OutputView
 
+출력을 하는 객체
+
+### void printEventPlanner()
+
+이벤트 플래너 문구 출력
+
+### void eventPreview(int day)
+
+이벤트 해택 문구 출력
+
+### void orderMenu(HashMap<String, Integer> order)
+
+<주문메뉴> 출력
+
+### void orderDiscountBefore(int money)
+
+<할인 전 총 주문 금액> 출력
+
+### void giftMenu(boolean bool)
+
+<증정메뉴> 출력
+
+### void benefits(HashMap<String, Integer> discount)
+
+<해택내역> 출력
+
+### void totalDiscount(int money)
+
+<총해택 금액> 출력
+
+### void estimatePayment(int money, int discountMoney)
+
+<할인 후 예상 결제 금액> 출력
+
+### void eventBadge(String str)
+
+<12월 이벤트 배지> 출력
+
+### String commaMoney(int money)
+
+숫자 3마리 마다 콤마 찍어서 출력.
+
 ## Class Exceptions
+
+예외처리를 도와주는 객체
+
+### void isInteger(String strValue)
+
+입력 받은 값이 정수인지 
+
+### void isDecemberDay(String strValue)
+
+입력 받은 값이 유효한 날짜인지 
+
+### void isValidMenu(String str)
+
+메뉴에 존재하는지
+
+### void isValidLeastOne(Integer num)
+
+최소 하나 이상 주문 했는지
+
+### void isValidMenuFormat(String[] str)
+
+형식에 맞게 주문했는지
+
+### void isValidOverlapping(HashMap<String, Integer> order, String str)
+
+중복된 주문이 없는지
+
+### void isOrderJustDrinks(HashMap<String, Integer> order)
+
+음료수만 주문하지 않았는지
+
+### void isOrderUpTo20(HashMap<String, Integer> order)
+
+20개가 넘게 메뉴를 주문하지 않았는지
+
 
 ## Enum Menu
 
@@ -111,6 +293,6 @@ WEEKEND(2023, "주말 할인"),
 
 SPECIAL(1000, "특별 할인"), 
 
-DDAY(1000, "크리스마스 디데이 할인")
+CHRISTMAS(1000, "크리스마스 디데이 할인")
 
 

@@ -43,7 +43,7 @@ public class Exceptions {
         }
     }
 
-    public static void isvalidOverlapping(HashMap<String, Integer> order, String str) {
+    public static void isValidOverlapping(HashMap<String, Integer> order, String str) {
         if (order.containsKey(str)) {
             throw new IllegalArgumentException("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
         }

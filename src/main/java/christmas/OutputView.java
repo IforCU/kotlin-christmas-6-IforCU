@@ -55,11 +55,12 @@ public class OutputView {
     }
 
     public void estimatePayment(int money, int discountMoney) {
+        System.out.println("\n<할인 후 예상 결제 금액>");
         if(money < 10000){
-            System.out.println("\n<할인 후 예상 결제 금액>\n" + commaMoney(money) + "원");
+            System.out.println(commaMoney(money) + "원");
             return;
         }
-        System.out.println("\n<할인 후 예상 결제 금액>\n" + commaMoney(money - discountMoney) + "원");
+        System.out.println(commaMoney(money - discountMoney) + "원");
     }
 
     public void eventBadge(String str) {

@@ -40,7 +40,7 @@ public class Discount {
         if(isSpecialDiscount()){
             discount.put(DistcountEvent.SPECIAL.getBenefit(),DistcountEvent.SPECIAL.getDiscount());
         }
-        if(isdDayDiscount()){
+        if(isCHRISTMASDiscount()){
             discount.put(DistcountEvent.CHRISTMAS.getBenefit(),(DistcountEvent.CHRISTMAS.getDiscount() + (day-1) * 100));
         }
         if (getGift()) {
@@ -106,7 +106,7 @@ public class Discount {
         return false;
     }
 
-    private boolean isdDayDiscount(){
+    private boolean isCHRISTMASDiscount(){
         if(day < 26){
             return  true;
         }
